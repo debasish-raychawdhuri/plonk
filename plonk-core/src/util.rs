@@ -21,11 +21,11 @@ where
 }
 
 /// Evaluation Domain Extension Trait
+#[allow(dead_code)]
 pub trait EvaluationDomainExt<F>: EvaluationDomain<F>
 where
     F: FftField,
 {
-    /// Returns the value of `log_2(self.size)`.
     fn log_size_of_group(&self) -> u32;
 
     /// Returns the inverse of the size in the field.
